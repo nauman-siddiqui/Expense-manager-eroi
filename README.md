@@ -33,64 +33,24 @@ Follow these instructions to set up the project on your local machine.
 * Composer
 * SQLite
 
-### Installation
+### Usage
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
-    cd your-repository-name
-    ```
 
-2.  **Install PHP dependencies:**
-    ```bash
-    composer install
-    ```
-
-3.  **Create your environment file:**
-    ```bash
-    cp .env.example .env
-    ```
-
-4.  **Configure the database:**
-    Open the `.env` file and ensure the database connection is set to SQLite:
-    ```env
-    DB_CONNECTION=sqlite
-    ```
-    (You can remove the other `DB_` variables as they are not needed for SQLite).
-
-5.  **Create the SQLite database file:**
-    ```bash
-    touch database/database.sqlite
-    ```
-
-6.  **Generate an application key:**
-    ```bash
-    php artisan key:generate
-    ```
-
-7.  **Run the database migrations:**
-    This will create the `users` and `expenses` tables.
-    ```bash
-    php artisan migrate
-    ```
-
-8.  **Create an admin user:**
+1.  **Create an admin user:**
     Run the following command and follow the prompts to create your login credentials.
     ```bash
     php artisan make:filament-user
     ```
 
-9.  **Start the development server:**
+2.  **Start the development server:**
     ```bash
     php artisan serve
     ```
 
-### Usage
-
-1.  Navigate to `http://127.0.0.1:8000/admin` in your web browser.
-2.  Log in with the credentials you created in the previous step.
-3.  Go to the "Expenses" section from the sidebar.
-4.  You can now:
+3.  Navigate to `http://127.0.0.1:8000/admin` in your web browser.
+4.  Log in with the credentials you created in the previous step.
+5.  Go to the "Expenses" section from the sidebar.
+6.  You can now:
     * Click **"New expense"** to add a single record.
     * Click **"Import Expenses"** to upload a CSV file. The CSV must have the columns: `date,source,amount`.
     * Use the filter dropdown on the pie chart to change the reporting period.
